@@ -1,0 +1,6 @@
+project_id: oomlout_storage_ikea_sockerbit_stadium_seating_configuration
+project_name: Oomlout Storage Ikea Sockerbit Stadium Seating Configuration
+project_repo: https://github.com/oomlout/oomlout_storage_ikea_sockerbit_stadium_seating_configuration
+production_format:
+  oolc_1:
+    file_location: source_files/oolc_1.cdr
