@@ -17,7 +17,7 @@ def make_scad(**kwargs):
         #filter = []
 
         kwargs["save_type"] = "none"
-        kwargs["save_type"] = "all"
+        #kwargs["save_type"] = "all"
         
         kwargs["overwrite"] = True
         
@@ -90,7 +90,7 @@ def make_scad(**kwargs):
             part_details = {}
             counter = 1
             for part in parts:
-                name = part.get("type", "default")
+                name = part["kwargs"].get("type", "default")
                 part_details[name] = part
                 counter += 1
             yaml.dump(part_details, file)
