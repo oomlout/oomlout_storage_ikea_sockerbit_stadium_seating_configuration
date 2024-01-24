@@ -87,7 +87,13 @@ def make_scad(**kwargs):
     if True:
         yaml_file = "scad_output/working.yaml"
         with open(yaml_file, 'w') as file:
-            yaml.dump(parts, file)
+            part_details = {}
+            counter = 1
+            for part in parts:
+                name = part.get("type", "default")
+                part_details[name] = part
+                counter += 1
+            yaml.dump(part_details, file)
     
 
 
