@@ -16,8 +16,8 @@ def make_scad(**kwargs):
         filter = ""
         #filter = []
 
-        kwargs["save_type"] = "none"
-        #kwargs["save_type"] = "all"
+        #kwargs["save_type"] = "none"
+        kwargs["save_type"] = "all"
         
         kwargs["overwrite"] = True
         
@@ -195,7 +195,7 @@ def get_clamp_top(thing, **kwargs):
     p3 = copy.deepcopy(kwargs)
     p3["type"] = "p"
     p3["shape"] = f"oobb_cube"
-    width = bin_spacing + 2 * sokerbit_lip_width + thickness_default * 2
+    width = bin_spacing + 2 * sokerbit_lip_width + thickness_default * 2 + sokerbit_plastic_thickness * 2
     height = thickness_default
     depth = thickness
     p3["size"] = [width, height, depth]   
@@ -217,10 +217,10 @@ def get_clamp_top(thing, **kwargs):
     pos1 = copy.deepcopy(pos)     
     pos1[2] += -depth/2
     pos11 = copy.deepcopy(pos1)
-    pos11[0] += -bin_spacing / 2 - sokerbit_lip_width - thickness_default / 2
+    pos11[0] += -bin_spacing / 2 - sokerbit_lip_width - thickness_default / 2 - sokerbit_plastic_thickness
     pos11[1] += -sokerbit_lip_depth / 2
     pos12 = copy.deepcopy(pos1)
-    pos12[0] += bin_spacing / 2 + sokerbit_lip_width + thickness_default / 2
+    pos12[0] += bin_spacing / 2 + sokerbit_lip_width + thickness_default / 2 + sokerbit_plastic_thickness
     pos12[1] += -sokerbit_lip_depth / 2
     poss.append(pos11)
     poss.append(pos12)

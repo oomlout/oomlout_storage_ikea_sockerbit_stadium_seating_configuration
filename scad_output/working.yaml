@@ -13,7 +13,7 @@ oomlout_storage_ikea_sockerbit_stadium_seating_configuration_clamp_bottom:
     modes:
     - 3dpr
     overwrite: true
-    save_type: none
+    save_type: all
     sockerbit_lip_depth: 15
     sockerbit_lip_width: 15
     sokerbit_plastic_thickness: 2
@@ -38,7 +38,7 @@ oomlout_storage_ikea_sockerbit_stadium_seating_configuration_clamp_top:
     modes:
     - 3dpr
     overwrite: true
-    save_type: none
+    save_type: all
     sockerbit_lip_depth: 15
     sockerbit_lip_width: 15
     sokerbit_plastic_thickness: 2
